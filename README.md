@@ -22,11 +22,14 @@ create testing DBs and insert some data.
 Tomcat will be up and run on port 8080. Then you’ll be able to call web services, for example:
 
 `curl -X GET 'http://localhost:8080/actuator/health'`
+
 `curl -X GET 'http://localhost:8080/query/list'`
+
 `curl -X POST -d '{ \ 
    "name": "selectAll", \ 
    "txt": "SELECT t.* FROM benchmark.test_table t" \ 
  }' 'http://localhost:8080/query/createOrUpdate'`
+ 
 `curl -X GET 'http://localhost:8080/query/execute/selectAll'`
 
 The REST services documentation is prepared by swagger and is available on
